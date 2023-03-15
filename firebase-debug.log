@@ -1,0 +1,156 @@
+[debug] [2023-03-15T04:37:30.951Z] ----------------------------------------------------------------------
+[debug] [2023-03-15T04:37:30.953Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start --project cs378-p4-2cdd3
+[debug] [2023-03-15T04:37:30.954Z] CLI Version:   11.24.1
+[debug] [2023-03-15T04:37:30.954Z] Platform:      darwin
+[debug] [2023-03-15T04:37:30.954Z] Node Version:  v19.7.0
+[debug] [2023-03-15T04:37:30.954Z] Time:          Tue Mar 14 2023 23:37:30 GMT-0500 (Central Daylight Time)
+[debug] [2023-03-15T04:37:30.954Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-15T04:37:31.057Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T04:37:31.058Z] > authorizing via signed-in user (anniethepro@gmail.com)
+[debug] [2023-03-15T04:37:31.119Z] java version "15" 2020-09-15
+Java(TM) SE Runtime Environment (build 15+36-1562)
+
+[debug] [2023-03-15T04:37:31.119Z] Java HotSpot(TM) 64-Bit Server VM (build 15+36-1562, mixed mode, sharing)
+
+[debug] [2023-03-15T04:37:31.123Z] Parsed Java major version: 15
+[info] i  emulators: Starting emulators: auth, functions, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, database, hosting"}}
+[debug] [2023-03-15T04:37:32.618Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-03-15T04:37:32.618Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-03-15T04:37:32.618Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] ⚠  hosting: Hosting Emulator unable to start on port 5001, starting on 5002 instead. {"metadata":{"emulator":{"name":"hosting"},"message":"Hosting Emulator unable to start on port 5001, starting on 5002 instead."}}
+[debug] [2023-03-15T04:37:32.619Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-03-15T04:37:32.619Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-03-15T04:37:32.627Z] [hub] writing locator at /var/folders/q3/ts21q4s147z4cl_l0wml9ms80000gn/T/hub-cs378-p4-2cdd3.json
+[debug] [2023-03-15T04:37:33.157Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-03-15T04:37:33.157Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-03-15T04:37:33.157Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: firestore, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mfirestore, pubsub, storage\u001b[22m"}}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to path/to/key.json. Non-emulated services will access production using these credentials. Be careful! {"metadata":{"emulator":{"name":"functions"},"message":"Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to path/to/key.json. Non-emulated services will access production using these credentials. Be careful!"}}
+[debug] [2023-03-15T04:37:33.164Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/adminSdkConfig [none]
+[debug] [2023-03-15T04:37:33.514Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/adminSdkConfig 200
+[debug] [2023-03-15T04:37:33.514Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/adminSdkConfig {"projectId":"cs378-p4-2cdd3","databaseURL":"https://cs378-p4-2cdd3-default-rtdb.firebaseio.com","storageBucket":"cs378-p4-2cdd3.appspot.com"}
+[debug] [2023-03-15T04:37:33.561Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3 [none]
+[debug] [2023-03-15T04:37:33.716Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3 200
+[debug] [2023-03-15T04:37:33.717Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3 {"projectId":"cs378-p4-2cdd3","projectNumber":"790590890132","displayName":"cs378-p4","name":"projects/cs378-p4-2cdd3","resources":{"hostingSite":"cs378-p4-2cdd3","realtimeDatabaseInstance":"cs378-p4-2cdd3-default-rtdb"},"state":"ACTIVE","etag":"1_387154d5-d59d-4537-acd1-a02b7ba228f2"}
+[debug] [2023-03-15T04:37:33.718Z] database rules config:  [{"instance":"cs378-p4-2cdd3-default-rtdb","rules":"/Users/annie/cs378-p4/database.rules.json"}]
+[debug] [2023-03-15T04:37:33.724Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-03-15T04:37:33.724Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-03-15T04:37:33.724Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-03-15T04:37:33.725Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/annie/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/annie/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-03-15T04:37:34.426Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/annie/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+ {"metadata":{"emulator":{"name":"database"},"message":"WARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/annie/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar) to field sun.nio.ch.SelectorImpl.selectedKeys\nWARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release\n"}}
+[debug] [2023-03-15T04:37:34.967Z] 23:37:34.966 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"23:37:34.966 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2023-03-15T04:37:35.133Z] 23:37:35.132 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"23:37:35.132 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2023-03-15T04:37:41.568Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/sites 
+[debug] [2023-03-15T04:37:42.111Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/sites 200
+[debug] [2023-03-15T04:37:42.111Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/sites {"sites":[{"name":"projects/cs378-p4-2cdd3/sites/cs378-p4-2cdd3","defaultUrl":"https://cs378-p4-2cdd3.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-03-15T04:37:42.112Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/webApps/-/config [none]
+[debug] [2023-03-15T04:37:42.621Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/webApps/-/config 200
+[debug] [2023-03-15T04:37:42.622Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3/webApps/-/config {"projectId":"cs378-p4-2cdd3","appId":"1:790590890132:web:29f57aefd32687fa15d481","databaseURL":"https://cs378-p4-2cdd3-default-rtdb.firebaseio.com","storageBucket":"cs378-p4-2cdd3.appspot.com","apiKey":"AIzaSyDwoYzRhBQA4C7BA3ROwr9r78CyjClUpdo","authDomain":"cs378-p4-2cdd3.firebaseapp.com","messagingSenderId":"790590890132","measurementId":"G-TLP9ZZ2FRK"}
+[debug] [2023-03-15T04:37:42.646Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3 [none]
+[debug] [2023-03-15T04:37:42.861Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3 200
+[debug] [2023-03-15T04:37:42.861Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cs378-p4-2cdd3 {"projectId":"cs378-p4-2cdd3","projectNumber":"790590890132","displayName":"cs378-p4","name":"projects/cs378-p4-2cdd3","resources":{"hostingSite":"cs378-p4-2cdd3","realtimeDatabaseInstance":"cs378-p4-2cdd3-default-rtdb"},"state":"ACTIVE","etag":"1_387154d5-d59d-4537-acd1-a02b7ba228f2"}
+[info] i  hosting[cs378-p4-2cdd3]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[cs378-p4-2cdd3]: Local server: http://127.0.0.1:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5002\u001b[22m\u001b[24m"}}
+[info] i  ui: downloading ui-v1.11.4.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.4.zip..."}}
+[debug] [2023-03-15T04:37:43.025Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.4.zip 
+[debug] [2023-03-15T04:37:43.193Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.4.zip 200
+[debug] [2023-03-15T04:37:43.194Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.4.zip [stream]
+[debug] [2023-03-15T04:37:45.603Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-03-15T04:37:45.604Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-03-15T04:37:45.604Z] Starting Emulator UI with command {"binary":"node","args":["/Users/annie/.cache/firebase/emulators/ui-v1.11.4/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/annie/.cache/firebase/emulators/ui-v1.11.4/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-03-15T04:37:45.739Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-03-15T04:37:45.739Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/annie/cs378-p4/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/annie/cs378-p4/functions\" for Cloud Functions..."}}
+[debug] [2023-03-15T04:37:45.875Z] Validating nodejs source
+[warn] ⚠  functions: Couldn't find firebase-functions package in your source code. Have you run 'npm install'? 
+[debug] [2023-03-15T04:37:45.878Z] getFunctionsSDKVersion encountered error:Cannot find module 'firebase-functions'
+Require stack:
+- /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js
+- /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/gcp/cloudfunctions.js
+- /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorShared.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/controller.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js
+- /usr/local/lib/node_modules/firebase-tools/lib/commands/database-get.js
+- /usr/local/lib/node_modules/firebase-tools/lib/commands/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js {"code":"MODULE_NOT_FOUND","requireStack":["/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js","/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js","/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/index.js","/usr/local/lib/node_modules/firebase-tools/lib/gcp/cloudfunctions.js","/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js","/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorShared.js","/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js","/usr/local/lib/node_modules/firebase-tools/lib/emulator/controller.js","/usr/local/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js","/usr/local/lib/node_modules/firebase-tools/lib/commands/database-get.js","/usr/local/lib/node_modules/firebase-tools/lib/commands/index.js","/usr/local/lib/node_modules/firebase-tools/lib/index.js","/usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js"]}
+[debug] [2023-03-15T04:37:45.879Z] checkFunctionsSDKVersion encountered error:Invalid Version:  {}
+[debug] [2023-03-15T04:37:45.880Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-03-15T04:37:45.880Z] Building nodejs source
+[debug] [2023-03-15T04:37:45.881Z] Failed to find version of module node: reached end of search path /Users/annie/cs378-p4/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "19". Using node@19 from host. 
+[debug] [2023-03-15T04:37:45.885Z] Could not parse firebase-functions version '' into semver. Falling back to parseTriggers.
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Error parsing triggers: Cannot find module 'firebase-functions'
+Require stack:
+- /Users/annie/cs378-p4/functions/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/triggerParser.js
+
+Try running "npm install" in your functions directory before deploying. {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Error parsing triggers: Cannot find module 'firebase-functions'\nRequire stack:\n- /Users/annie/cs378-p4/functions/index.js\n- /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/triggerParser.js\n\nTry running \"npm install\" in your functions directory before deploying."}}
+[debug] [2023-03-15T04:37:45.985Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=cs378-p4-2cdd3-default-rtdb
+[debug] [2023-03-15T04:37:45.985Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  \"rules\": {\n    \".read\": true,\n    \".write\": true\n  }\n}"
+[debug] [2023-03-15T04:37:46.247Z] 23:37:46.247 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - cs378-p4-2cdd3-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 119ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"23:37:46.247 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - cs378-p4-2cdd3-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 119ms, init: 0ms\n"}}
+[debug] [2023-03-15T04:37:46.305Z] 23:37:46.305 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace cs378-p4-2cdd3-default-rtdb status Active to Active
+ {"metadata":{"emulator":{"name":"database"},"message":"23:37:46.305 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace cs378-p4-2cdd3-default-rtdb status Active to Active\n"}}
+[debug] [2023-03-15T04:37:46.332Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2023-03-15T04:37:46.332Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5002 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
