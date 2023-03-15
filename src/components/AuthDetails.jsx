@@ -28,6 +28,7 @@ const AuthDetails = () => {
     signOut(auth)
       .then(() => {
         console.log("sign out successful");
+        setImageLink("")
       })
       .catch((error) => console.log(error));
   };
@@ -56,14 +57,27 @@ const AuthDetails = () => {
     }
 
     const updateImage = (email) => {
-        const db = getDatabase();
+        const db = ref(getDatabase());
         const email_substring = email.substring(0, email.indexOf("@"));
-        update(ref(db, 'users/' + email_substring), {
-            profile_picture : imageLink
-          });
-        // console.log(imageLink)
-        getImage(email);
+        get(child(db, 'users/' + email_substring)).then((snapshot) => {
+        if (snapshot.exists()) {
+            const imageUrl = snapshot.val().profile_picture;
+            if (imageUrl.length > imageLink.length) {
+                update(ref(db, 'users/' + email_substring), {
+                    profile_picture : imageUrl
+                  });
+            } else {
+                update(ref(db, 'users/' + email_substring), {
+                    profile_picture : imageLink
+                  });
+            }
+            getImage(email);
+            }
+        });
+            
     }
+
+
 
   return (
     <div>
@@ -74,13 +88,17 @@ const AuthDetails = () => {
           <div>
           <button onClick={getImage(authUser.email)}>Display User Profile Picture</button>
           </div>
+
           <div>
+          <form onSubmit={updateImage(authUser.email)}>
             <input
-            placeholder="Enter image address"
-            value={imageLink}
-            onChange={(e) => setImageLink(e.target.value)}
+                placeholder="Enter image address"
+                type="text"
+                value={imageLink}
+                onChange={(e) => setImageLink(e.target.value)}
             ></input>
-            <button onClick= {updateImage(authUser.email)} >Update Profile Image</button>
+                <input type="submit" value="Update Profile Picture"></input>
+            </form>
           </div>
 
           <h2>User Profile picture: </h2>
