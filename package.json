@@ -1,7 +1,7 @@
 {
   "name": "cs378-p4",
   "version": "0.1.0",
-  "homepage": "https://anniethepro.github.io/cs378-p4"
+  "homepage": "https://anniethepro.github.io/cs378-p4",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
