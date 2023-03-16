@@ -1,6 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { getDatabase, ref, child, get , update} from "firebase/database";
 
 
@@ -8,6 +8,7 @@ import { getDatabase, ref, child, get , update} from "firebase/database";
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
   const [imageLink, setImageLink] = useState("");
+  const input = useRef()
 
 
   useEffect(() => {
@@ -25,10 +26,10 @@ const AuthDetails = () => {
   }, []);
 
   const userSignOut = () => {
+    setImageLink("")
     signOut(auth)
       .then(() => {
         console.log("sign out successful");
-        setImageLink("")
       })
       .catch((error) => console.log(error));
   };
@@ -56,25 +57,16 @@ const AuthDetails = () => {
         });
     }
 
-    const updateImage = (email) => {
-        const db = ref(getDatabase());
+    const updateImage = async (email) => {
+        const db = getDatabase();
+        setImageLink(input.current.value)
         const email_substring = email.substring(0, email.indexOf("@"));
-        get(child(db, 'users/' + email_substring)).then((snapshot) => {
-        if (snapshot.exists()) {
-            const imageUrl = snapshot.val().profile_picture;
-            if (imageUrl.length > imageLink.length) {
-                update(ref(db, 'users/' + email_substring), {
-                    profile_picture : imageUrl
-                  });
-            } else {
-                update(ref(db, 'users/' + email_substring), {
-                    profile_picture : imageLink
-                  });
-            }
-            getImage(email);
-            }
+        await update(ref(db, 'users/' + email_substring), {
+            profile_picture : input.current.value
         });
-            
+        setImageLink("")
+        console.log('being called')
+        getImage(email);
     }
 
 
@@ -86,16 +78,17 @@ const AuthDetails = () => {
           <p>{`Signed In as ${authUser.email}`}</p>
           <button onClick={userSignOut}>Sign Out</button>
           <div>
-          <button onClick={getImage(authUser.email)}>Display User Profile Picture</button>
+          <button onClick={()=> getImage(authUser.email)}>Display User Profile Picture</button>
           </div>
 
           <div>
-          <form onSubmit={updateImage(authUser.email)}>
+          <form onSubmit= {(e)=>  {e.preventDefault();
+             updateImage(authUser.email)}}>
             <input
                 placeholder="Enter image address"
+                ref={input}
                 type="text"
-                value={imageLink}
-                onChange={(e) => setImageLink(e.target.value)}
+                // value={imageLink}
             ></input>
                 <input type="submit" value="Update Profile Picture"></input>
             </form>
